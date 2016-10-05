@@ -85,7 +85,7 @@ class CircularLevelRankingIndicatorView: UIView {
                 }
             }
             
-            // If it's the last one, add (not snp_make, not snp_remake since we don't
+            // If it's the last one, add (snp_make, not snp_remake since we don't
             // want to blow away the ones we just created) an anchor to the right side
             if index == self.rankViews.count - 1 {
                 rankView.snp_makeConstraints { make in
