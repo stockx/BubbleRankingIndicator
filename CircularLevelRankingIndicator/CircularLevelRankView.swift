@@ -8,6 +8,9 @@
 
 import UIKit
 
+// Libs
+import SnapKit
+
 class CircularLevelRankView: UIView {
     
     var rank: CircularLevelRank {
@@ -27,43 +30,29 @@ class CircularLevelRankView: UIView {
      */
     private let contentView = UIView()
     
+    /**
+     The padding value between the contentView and its superview.
+     In other words, the size of the outer ring.
+     */
+    private let padding: CGFloat = 2.5
+    
     init(rank: CircularLevelRank) {
         self.rank = rank
         super.init(frame: CGRectZero)
+        
+        translatesAutoresizingMaskIntoConstraints = false
         
         // TODO: REMOVE THIS LINE
         backgroundColor = UIColor.blueColor()
         
         label.clipsToBounds = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        contentView.clipsToBounds = true
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        makeCircular()
-        
+        label.textAlignment = .Center
+
         addSubview(contentView)
         contentView.addSubview(label)
+        contentView.backgroundColor = UIColor.lightGrayColor()
         
-        let views = ["label": label, "contentView": contentView]
-        let metrics = ["padding": 10]
-        
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-padding-[contentView]-padding-|",
-            options: [],
-            metrics: metrics,
-            views: views))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-padding-[contentView]-padding-|",
-            options: [],
-            metrics: metrics,
-            views: views))
-        
-        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[label]|",
-            options: [],
-            metrics: metrics,
-            views: views))
-        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[label]|",
-            options: [],
-            metrics: metrics,
-            views: views))
+        update()
     }
     
     override init(frame: CGRect) {
@@ -74,13 +63,36 @@ class CircularLevelRankView: UIView {
         fatalError("init(coder:) has not been implemented. Use init(rank:).")
     }
     
+    private func update() {
+        label.text = rank.name
+        // TODO: Update background image
+    }
+    
+    // MARK: View
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        makeCircular()
+        contentView.makeCircular()
+    }
+    
+    override func updateConstraints() {
+        contentView.snp_remakeConstraints { make in
+            make.edges.equalToSuperview().inset(self.padding)
+        }
+        
+        label.snp_remakeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        super.updateConstraints()
+    }
+}
+
+extension UIView {
     // TODO: Move this somewhere else.
     func makeCircular() {
         layer.cornerRadius = CGRectGetWidth(bounds) / 2.0;
         clipsToBounds = true
-    }
-    
-    private func update() {
-        // Update the level name and background image
     }
 }
