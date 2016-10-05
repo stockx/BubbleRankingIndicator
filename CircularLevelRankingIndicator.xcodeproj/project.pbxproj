@@ -15,6 +15,8 @@
 		02A181321DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A181311DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.swift */; };
 		02A1813D1DA54A7000F0FEB6 /* CircularLevelRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1813C1DA54A7000F0FEB6 /* CircularLevelRankingIndicatorView.swift */; };
 		02A181411DA5930900F0FEB6 /* CircularLevelRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A181401DA5930900F0FEB6 /* CircularLevelRankView.swift */; };
+		06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */; };
+		25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 		02A181331DA54A5100F0FEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02A1813C1DA54A7000F0FEB6 /* CircularLevelRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularLevelRankingIndicatorView.swift; sourceTree = "<group>"; };
 		02A181401DA5930900F0FEB6 /* CircularLevelRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularLevelRankView.swift; sourceTree = "<group>"; };
+		11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.debug.xcconfig"; sourceTree = "<group>"; };
+		27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D3DF27A25CFDF9A8C59DAC5 /* Pods-CircularLevelRankingIndicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.release.xcconfig"; sourceTree = "<group>"; };
+		BE1B1C61E4DFC3BF6784E925 /* Pods-CircularLevelRankingIndicatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicatorTests/Pods-CircularLevelRankingIndicatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC34698E009ED133BFC70D01 /* Pods-CircularLevelRankingIndicatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicatorTests/Pods-CircularLevelRankingIndicatorTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +76,8 @@
 				02A1811B1DA54A5100F0FEB6 /* CircularLevelRankingIndicator */,
 				02A181301DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */,
 				02A1811A1DA54A5100F0FEB6 /* Products */,
+				9F5DA5248FCA20BBDF55E974 /* Pods */,
+				E2A83A86A074CFBABC10E91B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,26 @@
 			path = CircularLevelRankingIndicatorTests;
 			sourceTree = "<group>";
 		};
+		9F5DA5248FCA20BBDF55E974 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */,
+				7D3DF27A25CFDF9A8C59DAC5 /* Pods-CircularLevelRankingIndicator.release.xcconfig */,
+				BE1B1C61E4DFC3BF6784E925 /* Pods-CircularLevelRankingIndicatorTests.debug.xcconfig */,
+				FC34698E009ED133BFC70D01 /* Pods-CircularLevelRankingIndicatorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2A83A86A074CFBABC10E91B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */,
+				488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02A181361DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicator" */;
 			buildPhases = (
+				34990AAFDEAC6C479412B3DD /* [CP] Check Pods Manifest.lock */,
 				02A181151DA54A5100F0FEB6 /* Sources */,
 				02A181161DA54A5100F0FEB6 /* Frameworks */,
 				02A181171DA54A5100F0FEB6 /* Resources */,
+				C3B976DA3DBF7D395D89F09D /* [CP] Embed Pods Frameworks */,
+				9715E836E87F14BBD62BAE30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02A181391DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicatorTests" */;
 			buildPhases = (
+				03D622A096948CE6ABECF792 /* [CP] Check Pods Manifest.lock */,
 				02A181291DA54A5100F0FEB6 /* Sources */,
 				02A1812A1DA54A5100F0FEB6 /* Frameworks */,
 				02A1812B1DA54A5100F0FEB6 /* Resources */,
+				350248279D293BF44AB0D6CC /* [CP] Embed Pods Frameworks */,
+				0ED7177AB7C4A93EA45D7992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +235,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03D622A096948CE6ABECF792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0ED7177AB7C4A93EA45D7992 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularLevelRankingIndicatorTests/Pods-CircularLevelRankingIndicatorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34990AAFDEAC6C479412B3DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		350248279D293BF44AB0D6CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularLevelRankingIndicatorTests/Pods-CircularLevelRankingIndicatorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9715E836E87F14BBD62BAE30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3B976DA3DBF7D395D89F09D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02A181151DA54A5100F0FEB6 /* Sources */ = {
@@ -335,6 +466,7 @@
 		};
 		02A181371DA54A5100F0FEB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CircularLevelRankingIndicator/Info.plist;
@@ -346,6 +478,7 @@
 		};
 		02A181381DA54A5100F0FEB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D3DF27A25CFDF9A8C59DAC5 /* Pods-CircularLevelRankingIndicator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CircularLevelRankingIndicator/Info.plist;
@@ -357,6 +490,7 @@
 		};
 		02A1813A1DA54A5100F0FEB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE1B1C61E4DFC3BF6784E925 /* Pods-CircularLevelRankingIndicatorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CircularLevelRankingIndicatorTests/Info.plist;
@@ -369,6 +503,7 @@
 		};
 		02A1813B1DA54A5100F0FEB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC34698E009ED133BFC70D01 /* Pods-CircularLevelRankingIndicatorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CircularLevelRankingIndicatorTests/Info.plist;
