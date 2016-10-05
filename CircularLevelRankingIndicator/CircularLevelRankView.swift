@@ -32,7 +32,7 @@ class CircularLevelRankView: UIView {
         super.init(frame: CGRectZero)
         
         // TODO: REMOVE THIS LINE
-        
+        backgroundColor = UIColor.blueColor()
         
         label.clipsToBounds = true
         label.translatesAutoresizingMaskIntoConstraints = false
