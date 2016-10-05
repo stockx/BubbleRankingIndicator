@@ -79,8 +79,8 @@ class CircularLevelRankingIndicatorView: UIView {
             if index > 0 && index <= (self.rankViews.count - 1) {
                 rankView.snp_remakeConstraints { make in
                     make.centerY.equalToSuperview()
-                    make.left.equalTo(self.rankViews[index - 1].snp_right)
                     make.height.equalTo(self.rankViews[index - 1].snp_height)
+                    make.left.equalTo(self.rankViews[index - 1].snp_right).offset(-20) // TODO: Make this part of the view state
                     make.width.equalTo(self.rankViews[index - 1].snp_width)
                 }
             }
