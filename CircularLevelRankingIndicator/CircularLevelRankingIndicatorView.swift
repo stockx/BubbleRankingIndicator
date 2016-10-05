@@ -23,13 +23,19 @@ class CircularLevelRankingIndicatorView: UIView {
     private let rankViews: [CircularLevelRankView]
     
     // MARK: Init
+    
     init(ranks: [CircularLevelRank]) {
         self.ranks = ranks
-        self.rankViews = self.ranks.map { CircularLevelRankView(rank: $0) }
+        self.rankViews = self.ranks.map { CircularLevelRankView(state: CircularLevelRankView.State(rank: $0, outerRingColor: nil)) }
         
         super.init(frame: CGRectZero)
         
-        backgroundColor = UIColor.greenColor()
+        // Iterate over the rankViews and assign the outerRingColor to the superview's background color
+        self.rankViews.forEach {
+            var state = $0.state
+            state.outerRingColor = self.superview?.backgroundColor
+            $0.state = state
+        }
         
         self.rankViews.forEach {
             self.addSubview($0)

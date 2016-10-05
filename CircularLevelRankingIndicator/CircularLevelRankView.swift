@@ -13,7 +13,12 @@ import SnapKit
 
 class CircularLevelRankView: UIView {
     
-    var rank: CircularLevelRank {
+    struct State {
+        let rank: CircularLevelRank
+        var outerRingColor: UIColor?
+    }
+    
+    var state: State {
         didSet {
             update()
         }
@@ -36,8 +41,8 @@ class CircularLevelRankView: UIView {
      */
     private let padding: CGFloat = 2.5
     
-    init(rank: CircularLevelRank) {
-        self.rank = rank
+    init(state: State) {
+        self.state = state
         super.init(frame: CGRectZero)
         
         translatesAutoresizingMaskIntoConstraints = false
@@ -56,15 +61,16 @@ class CircularLevelRankView: UIView {
     }
     
     override init(frame: CGRect) {
-        fatalError("init(frame:) has not been implemented. Use init(rank:).")
+        fatalError("init(frame:) has not been implemented. Use init(state:).")
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented. Use init(rank:).")
+        fatalError("init(coder:) has not been implemented. Use init(state:).")
     }
     
     private func update() {
-        label.text = rank.name
+        label.text = state.rank.name
+        self.backgroundColor = state.outerRingColor
         // TODO: Update background image
     }
     
