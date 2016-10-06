@@ -14,11 +14,12 @@ import SnapKit
 class CircularLevelRankView: UIView {
     
     struct State {
-        let rank: CircularLevelRank
+        var rank: CircularLevelRank
         var outerRingColor: UIColor?
+        var backgroundColor: UIColor
     }
     
-    var state: State {
+    var state: State? {
         didSet {
             update()
         }
@@ -41,10 +42,14 @@ class CircularLevelRankView: UIView {
      */
     private let padding: CGFloat = 2.5
     
-    init(state: State) {
+    convenience init(state: State) {
+        self.init(frame: CGRectZero)
         self.state = state
-        super.init(frame: CGRectZero)
-        
+        update()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
         
         // TODO: REMOVE THIS LINE
@@ -52,16 +57,10 @@ class CircularLevelRankView: UIView {
         
         label.clipsToBounds = true
         label.textAlignment = .Center
-
+        
         addSubview(contentView)
         contentView.addSubview(label)
         contentView.backgroundColor = UIColor.lightGrayColor()
-        
-        update()
-    }
-    
-    override init(frame: CGRect) {
-        fatalError("init(frame:) has not been implemented. Use init(state:).")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -69,9 +68,14 @@ class CircularLevelRankView: UIView {
     }
     
     private func update() {
+        guard let state = state else {
+            return
+        }
+        
         label.text = state.rank.name
         self.backgroundColor = state.outerRingColor
-        // TODO: Update background image
+        self.contentView.backgroundColor = state.backgroundColor
+        // TODO: Update background image using Heneke
     }
     
     // MARK: View

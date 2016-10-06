@@ -17,9 +17,19 @@ struct CircularLevelRank {
     let isActive: Bool
 }
 
+// TODO: Rename this to BubbleRankingIndicatorView
 class CircularLevelRankingIndicatorView: UIView {
-
-    let ranks: [CircularLevelRank]
+    
+    struct State {
+        var ranks: [CircularLevelRank]
+        var unachievedRankBackgroundColor: UIColor
+    }
+    
+    var state: State {
+        didSet {
+            update(oldValue)
+        }
+    }
     
     /**
      Represents how much larger the active CircularLevelRankView
@@ -27,19 +37,22 @@ class CircularLevelRankingIndicatorView: UIView {
      */
     let activeRankSizeMultiplier: CGFloat = 1.3
     
-    private let rankViews: [CircularLevelRankView]
+    private var rankViews = [CircularLevelRankView]()
     
     // MARK: Init
     
-    init(ranks: [CircularLevelRank]) {
-        self.ranks = ranks
-        self.rankViews = self.ranks.map { CircularLevelRankView(state: CircularLevelRankView.State(rank: $0, outerRingColor: UIColor.whiteColor())) }
+    init(state: State) {
+        self.state = state
         
         super.init(frame: CGRectZero)
         
         self.rankViews.forEach {
             self.addSubview($0)
         }
+        
+        // Use a default state for the oldValue
+        let defaultState = State(ranks: [], unachievedRankBackgroundColor: UIColor.whiteColor())
+        update(defaultState)
     }
     
     override init(frame: CGRect) {
@@ -48,6 +61,35 @@ class CircularLevelRankingIndicatorView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented. Use init(ranks:).")
+    }
+    
+    // MARK: State
+    
+    func update(oldState: State) {
+        // If the number of ranks has changed, need to remove the old ones and
+        // add the new ones.
+        if oldState.ranks.count != self.state.ranks.count {
+            self.rankViews.forEach {
+                $0.removeFromSuperview()
+            }
+            self.rankViews = self.state.ranks.map { _ in
+                return CircularLevelRankView(frame: CGRect.zero)
+            }
+            
+            self.rankViews.forEach {
+                self.addSubview($0)
+            }
+            
+        }
+        
+        // Update all the rankViews state's.
+        for (index, rankView) in self.rankViews.enumerate() {
+            rankView.state =  CircularLevelRankView.State(rank: self.state.ranks[index],
+                                                          outerRingColor: UIColor.whiteColor(),
+                                                          backgroundColor: self.state.unachievedRankBackgroundColor)
+        }
+        
+        self.setNeedsUpdateConstraints()
     }
     
     // MARK: View
@@ -62,7 +104,7 @@ class CircularLevelRankingIndicatorView: UIView {
         // print a warning message to the console.
         // Currently (v1.0), this does not support when the height is too small
         // thus requiring the ranks to be spaced out.
-        let targetedDiameter = width / CGFloat(ranks.count)
+        let targetedDiameter = width / CGFloat(self.state.ranks.count)
         
         guard (targetedDiameter * self.activeRankSizeMultiplier) <= height else {
             print("CircularLevenRankingIndicatorView: View is too short to support circular level ranks.\nNot drawing any ranks")
@@ -103,7 +145,7 @@ class CircularLevelRankingIndicatorView: UIView {
                 }
             }
 
-            if rankView.state.rank.isActive {
+            if rankView.state?.rank.isActive == true {
                 bringSubviewToFront(rankView)
                 activeRankView = rankView
             }
