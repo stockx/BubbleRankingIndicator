@@ -14,6 +14,7 @@ import SnapKit
 struct CircularLevelRank {
     let name: String
     let backgroundImageName: String?
+    let isActive: Bool
 }
 
 class CircularLevelRankingIndicatorView: UIView {
