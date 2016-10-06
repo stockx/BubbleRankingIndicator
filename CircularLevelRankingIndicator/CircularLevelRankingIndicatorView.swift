@@ -21,6 +21,12 @@ class CircularLevelRankingIndicatorView: UIView {
 
     let ranks: [CircularLevelRank]
     
+    /**
+     Represents how much larger the active CircularLevelRankView
+     will be than the inactive ones.
+     */
+    let activeRankSizeMultiplier: CGFloat = 1.3
+    
     private let rankViews: [CircularLevelRankView]
     
     // MARK: Init
@@ -58,12 +64,15 @@ class CircularLevelRankingIndicatorView: UIView {
         // thus requiring the ranks to be spaced out.
         let targetedDiameter = width / CGFloat(ranks.count)
         
-        guard targetedDiameter <= height else {
+        guard (targetedDiameter * self.activeRankSizeMultiplier) <= height else {
             print("CircularLevenRankingIndicatorView: View is too short to support circular level ranks.\nNot drawing any ranks")
             self.rankViews.forEach { $0.snp_removeConstraints() }
             super.updateConstraints()
             return
         }
+        
+        var inactiveRankViews = [CircularLevelRankView]()
+        var activeRankView: CircularLevelRankView? = nil
         
         for (index, rankView) in self.rankViews.enumerate() {
             // If it's the first one, anchor it to the left side.
@@ -81,7 +90,6 @@ class CircularLevelRankingIndicatorView: UIView {
                 rankView.snp_remakeConstraints { make in
                     make.centerY.equalToSuperview()
                     make.left.equalTo(self.rankViews[index - 1].snp_right).offset(-20) // TODO: Make this part of the view state
-                    make.width.equalTo(self.rankViews[index - 1].snp_width)
                     make.height.equalTo(rankView.snp_width)
                 }
             }
@@ -94,7 +102,32 @@ class CircularLevelRankingIndicatorView: UIView {
                     make.right.equalToSuperview()
                 }
             }
-            
+
+            if rankView.state.rank.isActive {
+                bringSubviewToFront(rankView)
+                activeRankView = rankView
+            }
+            else {
+                sendSubviewToBack(rankView)
+                inactiveRankViews.append(rankView)
+            }
+        }
+        
+        // Make all width's of the inactive rankViews equal.
+        for (index, rankView) in inactiveRankViews.enumerate() {
+            if index > 0 {
+                rankView.snp_makeConstraints { make in
+                    make.width.equalTo(inactiveRankViews[index - 1].snp_width)
+                }
+            }
+        }
+        
+        // Make the width of the active rankView larger than the inactive ones.
+        if let activeRankView = activeRankView,
+            let firstInactiveRankView = inactiveRankViews.first {
+            activeRankView.snp_makeConstraints { make in
+                make.width.equalTo(firstInactiveRankView.snp_width).multipliedBy(self.activeRankSizeMultiplier)
+            }
         }
         
         super.updateConstraints()
