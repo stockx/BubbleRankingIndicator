@@ -16,6 +16,8 @@ class CircularLevelRankView: UIView {
     
     struct State {
         var rank: CircularLevelRank
+        var isActive: Bool
+        var hasAchievedRank: Bool
         var outerRingColor: UIColor?
         var backgroundColor: UIColor
     }
@@ -95,6 +97,15 @@ class CircularLevelRankView: UIView {
                 }, success: { (image) in
                     self.imageView.image = image
             })
+        }
+        
+        imageView.hidden = !state.hasAchievedRank
+        
+        if state.hasAchievedRank && !state.isActive {
+            label.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+        }
+        else {
+            label.backgroundColor = UIColor.clearColor()
         }
     }
     

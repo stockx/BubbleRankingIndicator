@@ -12,9 +12,9 @@ import UIKit
 import SnapKit
 
 struct CircularLevelRank {
+    let level: Int
     let name: String
     let backgroundImageName: String?
-    let isActive: Bool
 }
 
 // TODO: Rename this to BubbleRankingIndicatorView
@@ -22,6 +22,7 @@ class CircularLevelRankingIndicatorView: UIView {
     
     struct State {
         var ranks: [CircularLevelRank]
+        var activeRankLevel: Int
         var unachievedRankBackgroundColor: UIColor
     }
     
@@ -51,7 +52,7 @@ class CircularLevelRankingIndicatorView: UIView {
         }
         
         // Use a default state for the oldValue
-        let defaultState = State(ranks: [], unachievedRankBackgroundColor: UIColor.whiteColor())
+        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.whiteColor())
         update(defaultState)
     }
     
@@ -85,6 +86,8 @@ class CircularLevelRankingIndicatorView: UIView {
         // Update all the rankViews state's.
         for (index, rankView) in self.rankViews.enumerate() {
             rankView.state =  CircularLevelRankView.State(rank: self.state.ranks[index],
+                                                          isActive: self.state.ranks[index].level == self.state.activeRankLevel,
+                                                          hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
                                                           outerRingColor: UIColor.whiteColor(),
                                                           backgroundColor: self.state.unachievedRankBackgroundColor)
         }
@@ -147,7 +150,7 @@ class CircularLevelRankingIndicatorView: UIView {
                 }
             }
 
-            if rankView.state?.rank.isActive == true {
+            if rankView.state?.isActive == true {
                 bringSubviewToFront(rankView)
                 hasShownActiveRankView = true
                 activeRankView = rankView

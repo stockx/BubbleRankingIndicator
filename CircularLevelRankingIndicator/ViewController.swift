@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var ranks = [CircularLevelRank]()
-        ranks.append(CircularLevelRank(name: "1", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2011/10/kanye_west2011-paris-fashion-show-headshot-big-ver-upper.jpg", isActive: false))
-        ranks.append(CircularLevelRank(name: "2", backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg", isActive: true))
-        ranks.append(CircularLevelRank(name: "3", backgroundImageName: "https://t4.rbxcdn.com/ec3f660cb0d5b1d080c951169a98d9f4", isActive: false))
-        ranks.append(CircularLevelRank(name: "4", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2010/02/michael_jordan2010-headshot-blk-brgd-med-wide.jpg", isActive: false))
-        let state = CircularLevelRankingIndicatorView.State(ranks: ranks, unachievedRankBackgroundColor: UIColor.lightGrayColor())
+        ranks.append(CircularLevelRank(level: 0, name: "1", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2011/10/kanye_west2011-paris-fashion-show-headshot-big-ver-upper.jpg"))
+        ranks.append(CircularLevelRank(level: 1, name: "2", backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg"))
+        ranks.append(CircularLevelRank(level: 2, name: "3", backgroundImageName: "https://t4.rbxcdn.com/ec3f660cb0d5b1d080c951169a98d9f4"))
+        ranks.append(CircularLevelRank(level: 3, name: "4", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2010/02/michael_jordan2010-headshot-blk-brgd-med-wide.jpg"))
+        let state = CircularLevelRankingIndicatorView.State(ranks: ranks, activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.lightGrayColor())
         
         let ranking = CircularLevelRankingIndicatorView(state: state)
         
@@ -57,10 +57,11 @@ class ViewController: UIViewController {
         var ranks = [CircularLevelRank]()
         
         for index in 0..<numberOfRanks {
-            ranks.append(CircularLevelRank(name: String(index), backgroundImageName: nil, isActive: index == activeRank))
+            ranks.append(CircularLevelRank(level: index, name: String(index), backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg"))
         }
         
         var state = self.ranking.state
+        state.activeRankLevel = activeRank
         state.ranks = ranks
         self.ranking.state = state
     }
