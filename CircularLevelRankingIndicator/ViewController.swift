@@ -25,11 +25,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         var ranks = [CircularLevelRank]()
-        ranks.append(CircularLevelRank(name: "1", backgroundImageName: nil, isActive: false))
-        ranks.append(CircularLevelRank(name: "2", backgroundImageName: nil, isActive: true))
-        ranks.append(CircularLevelRank(name: "3", backgroundImageName: nil, isActive: false))
-        ranks.append(CircularLevelRank(name: "4", backgroundImageName: nil, isActive: false))
-        ranks.append(CircularLevelRank(name: "5", backgroundImageName: nil, isActive: false))
+        ranks.append(CircularLevelRank(name: "1", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2011/10/kanye_west2011-paris-fashion-show-headshot-big-ver-upper.jpg", isActive: false))
+        ranks.append(CircularLevelRank(name: "2", backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg", isActive: true))
+        ranks.append(CircularLevelRank(name: "3", backgroundImageName: "https://t4.rbxcdn.com/ec3f660cb0d5b1d080c951169a98d9f4", isActive: false))
+        ranks.append(CircularLevelRank(name: "4", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2010/02/michael_jordan2010-headshot-blk-brgd-med-wide.jpg", isActive: false))
         let state = CircularLevelRankingIndicatorView.State(ranks: ranks, unachievedRankBackgroundColor: UIColor.lightGrayColor())
         
         let ranking = CircularLevelRankingIndicatorView(state: state)

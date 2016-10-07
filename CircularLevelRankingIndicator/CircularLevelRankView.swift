@@ -10,6 +10,7 @@ import UIKit
 
 // Libs
 import SnapKit
+import Haneke
 
 class CircularLevelRankView: UIView {
     
@@ -37,6 +38,11 @@ class CircularLevelRankView: UIView {
     private let contentView = UIView()
     
     /**
+     The imageview to display the background image of the rank.
+     */
+    private let imageView = UIImageView()
+    
+    /**
      The padding value between the contentView and its superview.
      In other words, the size of the outer ring.
      */
@@ -55,12 +61,16 @@ class CircularLevelRankView: UIView {
         // TODO: REMOVE THIS LINE
         backgroundColor = UIColor.blueColor()
         
+        imageView.clipsToBounds = true
+        imageView.contentMode = .ScaleAspectFit
+        contentView.addSubview(imageView)
+        
         label.clipsToBounds = true
         label.textAlignment = .Center
+        contentView.addSubview(label)
+        
         
         addSubview(contentView)
-        contentView.addSubview(label)
-        contentView.backgroundColor = UIColor.lightGrayColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,7 +85,17 @@ class CircularLevelRankView: UIView {
         label.text = state.rank.name
         self.backgroundColor = state.outerRingColor
         self.contentView.backgroundColor = state.backgroundColor
-        // TODO: Update background image using Heneke
+        if let imageURLString = state.rank.backgroundImageName,
+            imageURL = NSURL(string: imageURLString) {
+            self.imageView.hnk_setImageFromURL(imageURL,
+                                               placeholder: nil,
+                                               format: Format<UIImage>(name: "RankImages"),
+                                               failure: { (error) in
+                                                print("Failed fetching rank image from URL \(imageURL). Error: \(error)")
+                }, success: { (image) in
+                    self.imageView.image = image
+            })
+        }
     }
     
     // MARK: View
@@ -89,6 +109,10 @@ class CircularLevelRankView: UIView {
     override func updateConstraints() {
         contentView.snp_remakeConstraints { make in
             make.edges.equalToSuperview().inset(self.padding)
+        }
+        
+        imageView.snp_remakeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
         
         label.snp_remakeConstraints { make in
