@@ -67,3 +67,9 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.drawBubbleRankingIndicatorView(self.drawViewButton)
+        return true
+    }
+}
