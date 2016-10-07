@@ -116,6 +116,8 @@ class CircularLevelRankingIndicatorView: UIView {
         var inactiveRankViews = [CircularLevelRankView]()
         var activeRankView: CircularLevelRankView? = nil
         
+        var hasShownActiveRankView = false
+        
         for (index, rankView) in self.rankViews.enumerate() {
             // If it's the first one, anchor it to the left side.
             if index == 0 {
@@ -147,10 +149,16 @@ class CircularLevelRankingIndicatorView: UIView {
 
             if rankView.state?.rank.isActive == true {
                 bringSubviewToFront(rankView)
+                hasShownActiveRankView = true
                 activeRankView = rankView
             }
             else {
-                sendSubviewToBack(rankView)
+                if !hasShownActiveRankView {
+                    bringSubviewToFront(rankView)
+                }
+                else {
+                    sendSubviewToBack(rankView)
+                }
                 inactiveRankViews.append(rankView)
             }
         }
