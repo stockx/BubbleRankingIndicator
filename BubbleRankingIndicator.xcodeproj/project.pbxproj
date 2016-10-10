@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02A1811D1DA54A5100F0FEB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1811C1DA54A5100F0FEB6 /* AppDelegate.swift */; };
-		02A1811F1DA54A5100F0FEB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1811E1DA54A5100F0FEB6 /* ViewController.swift */; };
-		02A181221DA54A5100F0FEB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A181201DA54A5100F0FEB6 /* Main.storyboard */; };
-		02A181241DA54A5100F0FEB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A181231DA54A5100F0FEB6 /* Assets.xcassets */; };
-		02A181271DA54A5100F0FEB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02A181251DA54A5100F0FEB6 /* LaunchScreen.storyboard */; };
 		02A181321DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A181311DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.swift */; };
-		02A1813D1DA54A7000F0FEB6 /* BubbleRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A1813C1DA54A7000F0FEB6 /* BubbleRankingIndicatorView.swift */; };
-		02A181411DA5930900F0FEB6 /* CircularLevelRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A181401DA5930900F0FEB6 /* CircularLevelRankView.swift */; };
+		02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E55F1DABF0590007EE26 /* AppDelegate.swift */; };
+		02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5601DABF0590007EE26 /* Assets.xcassets */; };
+		02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */; };
+		02C7E5681DABF0590007EE26 /* CircularLevelRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5621DABF0590007EE26 /* CircularLevelRankView.swift */; };
+		02C7E5691DABF0590007EE26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5631DABF0590007EE26 /* Info.plist */; };
+		02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5641DABF0590007EE26 /* ViewController.swift */; };
+		02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */; };
+		02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56D1DABF0690007EE26 /* Main.storyboard */; };
 		06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */; };
 		25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */; };
 /* End PBXBuildFile section */
@@ -30,18 +31,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A181191DA54A5100F0FEB6 /* CircularLevelRankingIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularLevelRankingIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02A1811C1DA54A5100F0FEB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02A1811E1DA54A5100F0FEB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02A181211DA54A5100F0FEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		02A181231DA54A5100F0FEB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		02A181261DA54A5100F0FEB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		02A181281DA54A5100F0FEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02A1812D1DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularLevelRankingIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A181191DA54A5100F0FEB6 /* BubbleRankingIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleRankingIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02A1812D1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleRankingIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A181311DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLevelRankingIndicatorTests.swift; sourceTree = "<group>"; };
 		02A181331DA54A5100F0FEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02A1813C1DA54A7000F0FEB6 /* BubbleRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRankingIndicatorView.swift; sourceTree = "<group>"; };
-		02A181401DA5930900F0FEB6 /* CircularLevelRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularLevelRankView.swift; sourceTree = "<group>"; };
+		02C7E55F1DABF0590007EE26 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BubbleRankingIndicator/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		02C7E5601DABF0590007EE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BubbleRankingIndicator/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleRankingIndicatorView.swift; path = BubbleRankingIndicator/BubbleRankingIndicatorView.swift; sourceTree = SOURCE_ROOT; };
+		02C7E5621DABF0590007EE26 /* CircularLevelRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLevelRankView.swift; path = BubbleRankingIndicator/CircularLevelRankView.swift; sourceTree = SOURCE_ROOT; };
+		02C7E5631DABF0590007EE26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BubbleRankingIndicator/Info.plist; sourceTree = SOURCE_ROOT; };
+		02C7E5641DABF0590007EE26 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BubbleRankingIndicator/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		02C7E56C1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		02C7E56E1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.debug.xcconfig"; sourceTree = "<group>"; };
 		27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +74,7 @@
 		02A181101DA54A5100F0FEB6 = {
 			isa = PBXGroup;
 			children = (
-				02A1811B1DA54A5100F0FEB6 /* CircularLevelRankingIndicator */,
+				02A1811B1DA54A5100F0FEB6 /* BubbleRankingIndicator */,
 				02A181301DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */,
 				02A1811A1DA54A5100F0FEB6 /* Products */,
 				9F5DA5248FCA20BBDF55E974 /* Pods */,
@@ -84,24 +85,25 @@
 		02A1811A1DA54A5100F0FEB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				02A181191DA54A5100F0FEB6 /* CircularLevelRankingIndicator.app */,
-				02A1812D1DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.xctest */,
+				02A181191DA54A5100F0FEB6 /* BubbleRankingIndicator.app */,
+				02A1812D1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		02A1811B1DA54A5100F0FEB6 /* CircularLevelRankingIndicator */ = {
+		02A1811B1DA54A5100F0FEB6 /* BubbleRankingIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				02A1811C1DA54A5100F0FEB6 /* AppDelegate.swift */,
-				02A1811E1DA54A5100F0FEB6 /* ViewController.swift */,
-				02A1813C1DA54A7000F0FEB6 /* BubbleRankingIndicatorView.swift */,
-				02A181401DA5930900F0FEB6 /* CircularLevelRankView.swift */,
-				02A181201DA54A5100F0FEB6 /* Main.storyboard */,
-				02A181231DA54A5100F0FEB6 /* Assets.xcassets */,
-				02A181251DA54A5100F0FEB6 /* LaunchScreen.storyboard */,
-				02A181281DA54A5100F0FEB6 /* Info.plist */,
+				02C7E55F1DABF0590007EE26 /* AppDelegate.swift */,
+				02C7E5601DABF0590007EE26 /* Assets.xcassets */,
+				02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */,
+				02C7E5621DABF0590007EE26 /* CircularLevelRankView.swift */,
+				02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */,
+				02C7E56D1DABF0690007EE26 /* Main.storyboard */,
+				02C7E5631DABF0590007EE26 /* Info.plist */,
+				02C7E5641DABF0590007EE26 /* ViewController.swift */,
 			);
+			name = BubbleRankingIndicator;
 			path = CircularLevelRankingIndicator;
 			sourceTree = "<group>";
 		};
@@ -137,9 +139,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		02A181181DA54A5100F0FEB6 /* CircularLevelRankingIndicator */ = {
+		02A181181DA54A5100F0FEB6 /* BubbleRankingIndicator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02A181361DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicator" */;
+			buildConfigurationList = 02A181361DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "BubbleRankingIndicator" */;
 			buildPhases = (
 				34990AAFDEAC6C479412B3DD /* [CP] Check Pods Manifest.lock */,
 				02A181151DA54A5100F0FEB6 /* Sources */,
@@ -152,14 +154,14 @@
 			);
 			dependencies = (
 			);
-			name = CircularLevelRankingIndicator;
+			name = BubbleRankingIndicator;
 			productName = CircularLevelRankingIndicator;
-			productReference = 02A181191DA54A5100F0FEB6 /* CircularLevelRankingIndicator.app */;
+			productReference = 02A181191DA54A5100F0FEB6 /* BubbleRankingIndicator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		02A1812C1DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */ = {
+		02A1812C1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 02A181391DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicatorTests" */;
+			buildConfigurationList = 02A181391DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "BubbleRankingIndicatorTests" */;
 			buildPhases = (
 				03D622A096948CE6ABECF792 /* [CP] Check Pods Manifest.lock */,
 				02A181291DA54A5100F0FEB6 /* Sources */,
@@ -173,9 +175,9 @@
 			dependencies = (
 				02A1812F1DA54A5100F0FEB6 /* PBXTargetDependency */,
 			);
-			name = CircularLevelRankingIndicatorTests;
+			name = BubbleRankingIndicatorTests;
 			productName = CircularLevelRankingIndicatorTests;
-			productReference = 02A1812D1DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests.xctest */;
+			productReference = 02A1812D1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -210,8 +212,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				02A181181DA54A5100F0FEB6 /* CircularLevelRankingIndicator */,
-				02A1812C1DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */,
+				02A181181DA54A5100F0FEB6 /* BubbleRankingIndicator */,
+				02A1812C1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -221,9 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A181271DA54A5100F0FEB6 /* LaunchScreen.storyboard in Resources */,
-				02A181241DA54A5100F0FEB6 /* Assets.xcassets in Resources */,
-				02A181221DA54A5100F0FEB6 /* Main.storyboard in Resources */,
+				02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */,
+				02C7E5691DABF0590007EE26 /* Info.plist in Resources */,
+				02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */,
+				02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02A1811F1DA54A5100F0FEB6 /* ViewController.swift in Sources */,
-				02A1811D1DA54A5100F0FEB6 /* AppDelegate.swift in Sources */,
-				02A181411DA5930900F0FEB6 /* CircularLevelRankView.swift in Sources */,
-				02A1813D1DA54A7000F0FEB6 /* BubbleRankingIndicatorView.swift in Sources */,
+				02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */,
+				02C7E5681DABF0590007EE26 /* CircularLevelRankView.swift in Sources */,
+				02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */,
+				02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,26 +357,26 @@
 /* Begin PBXTargetDependency section */
 		02A1812F1DA54A5100F0FEB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 02A181181DA54A5100F0FEB6 /* CircularLevelRankingIndicator */;
+			target = 02A181181DA54A5100F0FEB6 /* BubbleRankingIndicator */;
 			targetProxy = 02A1812E1DA54A5100F0FEB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		02A181201DA54A5100F0FEB6 /* Main.storyboard */ = {
+		02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				02A181211DA54A5100F0FEB6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		02A181251DA54A5100F0FEB6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02A181261DA54A5100F0FEB6 /* Base */,
+				02C7E56C1DABF0690007EE26 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		02C7E56D1DABF0690007EE26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02C7E56E1DABF0690007EE26 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -469,10 +472,12 @@
 			baseConfigurationReference = 11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CircularLevelRankingIndicator/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.CircularLevelRankingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -481,7 +486,8 @@
 			baseConfigurationReference = 7D3DF27A25CFDF9A8C59DAC5 /* Pods-CircularLevelRankingIndicator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CircularLevelRankingIndicator/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.CircularLevelRankingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -526,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02A181361DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicator" */ = {
+		02A181361DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "BubbleRankingIndicator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02A181371DA54A5100F0FEB6 /* Debug */,
@@ -535,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02A181391DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "CircularLevelRankingIndicatorTests" */ = {
+		02A181391DA54A5100F0FEB6 /* Build configuration list for PBXNativeTarget "BubbleRankingIndicatorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02A1813A1DA54A5100F0FEB6 /* Debug */,
