@@ -1,6 +1,6 @@
 //
-//  CircularLevelRankingIndicatorView.swift
-//  CircularLevelRankingIndicator
+//  BubbleRankingIndicatorView.swift
+//  BubbleRankingIndicatorView
 //
 //  Created by Sklar, Josh on 10/5/16.
 //  Copyright © 2016 Sklar. All rights reserved.
@@ -17,8 +17,7 @@ struct CircularLevelRank {
     let backgroundImageName: String?
 }
 
-// TODO: Rename this to BubbleRankingIndicatorView
-class CircularLevelRankingIndicatorView: UIView {
+class BubbleRankingIndicatorView: UIView {
     
     struct State {
         var ranks: [CircularLevelRank]

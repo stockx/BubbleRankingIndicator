@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/jsklar1/Desktop/CircularLevelRankingIndicator/BubbleRankingIndicator.xcodeproj">
+      location = "group:BubbleRankingIndicator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
