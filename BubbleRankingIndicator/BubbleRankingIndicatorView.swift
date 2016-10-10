@@ -32,12 +32,12 @@ class BubbleRankingIndicatorView: UIView {
     }
     
     /**
-     Represents how much larger the active CircularLevelRankView
+     Represents how much larger the active BubbleRankView
      will be than the inactive ones.
      */
     let activeRankSizeMultiplier: CGFloat = 1.3
     
-    private var rankViews = [CircularLevelRankView]()
+    private var rankViews = [BubbleRankView]()
     
     // MARK: Init
     
@@ -73,7 +73,7 @@ class BubbleRankingIndicatorView: UIView {
                 $0.removeFromSuperview()
             }
             self.rankViews = self.state.ranks.map { _ in
-                return CircularLevelRankView(frame: CGRect.zero)
+                return BubbleRankView(frame: CGRect.zero)
             }
             
             self.rankViews.forEach {
@@ -84,7 +84,7 @@ class BubbleRankingIndicatorView: UIView {
         
         // Update all the rankViews state's.
         for (index, rankView) in self.rankViews.enumerate() {
-            rankView.state =  CircularLevelRankView.State(rank: self.state.ranks[index],
+            rankView.state =  BubbleRankView.State(rank: self.state.ranks[index],
                                                           isActive: self.state.ranks[index].level == self.state.activeRankLevel,
                                                           hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
                                                           outerRingColor: UIColor.whiteColor(),
@@ -115,8 +115,8 @@ class BubbleRankingIndicatorView: UIView {
             return
         }
         
-        var inactiveRankViews = [CircularLevelRankView]()
-        var activeRankView: CircularLevelRankView? = nil
+        var inactiveRankViews = [BubbleRankView]()
+        var activeRankView: BubbleRankView? = nil
         
         var hasShownActiveRankView = false
         

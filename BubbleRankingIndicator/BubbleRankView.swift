@@ -1,6 +1,6 @@
 //
-//  CircularLevelRankView.swift
-//  CircularLevelRankingIndicator
+//  BubbleRankView.swift
+//  BubbleRankingIndicator
 //
 //  Created by Sklar, Josh on 10/5/16.
 //  Copyright © 2016 Sklar. All rights reserved.
@@ -12,7 +12,7 @@ import UIKit
 import SnapKit
 import Haneke
 
-class CircularLevelRankView: UIView {
+class BubbleRankView: UIView {
     
     struct State {
         var rank: CircularLevelRank
