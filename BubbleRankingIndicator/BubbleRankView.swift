@@ -15,7 +15,7 @@ import Haneke
 class BubbleRankView: UIView {
     
     struct State {
-        var rank: CircularLevelRank
+        var rank: Rank
         var isActive: Bool
         var hasAchievedRank: Bool
         var outerRingColor: UIColor?

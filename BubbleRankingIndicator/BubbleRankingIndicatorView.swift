@@ -11,7 +11,7 @@ import UIKit
 // Libs
 import SnapKit
 
-struct CircularLevelRank {
+struct Rank {
     let level: Int
     let name: String
     let backgroundImageName: String?
@@ -20,7 +20,7 @@ struct CircularLevelRank {
 class BubbleRankingIndicatorView: UIView {
     
     struct State {
-        var ranks: [CircularLevelRank]
+        var ranks: [Rank]
         var activeRankLevel: Int
         var unachievedRankBackgroundColor: UIColor
     }
