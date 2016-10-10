@@ -1,15 +1,15 @@
 //
-//  CircularLevelRankingIndicatorTests.swift
-//  CircularLevelRankingIndicatorTests
+//  BubbleRankingIndicatorTests.swift
+//  BubbleRankingIndicatorTests
 //
 //  Created by Sklar, Josh on 10/5/16.
 //  Copyright © 2016 Sklar. All rights reserved.
 //
 
 import XCTest
-@testable import CircularLevelRankingIndicator
+@testable import BubbleRankingIndicator
 
-class CircularLevelRankingIndicatorTests: XCTestCase {
+class BubbleRankingIndicatorTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
