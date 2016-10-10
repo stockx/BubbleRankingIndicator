@@ -4,7 +4,7 @@
 target 'BubbleRankingIndicator' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  # Pods for CircularLevelRankingIndicator
+  # Pods for BubbleRankingIndicator
   pod 'SnapKit', '0.22.0'
   pod 'HanekeSwift'
 
