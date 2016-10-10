@@ -133,11 +133,3 @@ class BubbleRankView: UIView {
         super.updateConstraints()
     }
 }
-
-extension UIView {
-    // TODO: Move this somewhere else.
-    func makeCircular() {
-        layer.cornerRadius = CGRectGetWidth(bounds) / 2.0;
-        clipsToBounds = true
-    }
-}

@@ -16,6 +16,7 @@
 		02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5641DABF0590007EE26 /* ViewController.swift */; };
 		02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */; };
 		02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56D1DABF0690007EE26 /* Main.storyboard */; };
+		02C7E5741DABF32F0007EE26 /* UIView+Manipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5731DABF32F0007EE26 /* UIView+Manipulation.swift */; };
 		06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */; };
 		25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		02C7E5641DABF0590007EE26 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BubbleRankingIndicator/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C7E56C1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		02C7E56E1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		02C7E5731DABF32F0007EE26 /* UIView+Manipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Manipulation.swift"; sourceTree = "<group>"; };
 		11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.debug.xcconfig"; sourceTree = "<group>"; };
 		27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				02A1811B1DA54A5100F0FEB6 /* BubbleRankingIndicator */,
+				02C7E5721DABF3150007EE26 /* Extensions */,
 				02A181301DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */,
 				02A1811A1DA54A5100F0FEB6 /* Products */,
 				9F5DA5248FCA20BBDF55E974 /* Pods */,
@@ -114,6 +117,14 @@
 				02A181331DA54A5100F0FEB6 /* Info.plist */,
 			);
 			path = CircularLevelRankingIndicatorTests;
+			sourceTree = "<group>";
+		};
+		02C7E5721DABF3150007EE26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02C7E5731DABF32F0007EE26 /* UIView+Manipulation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9F5DA5248FCA20BBDF55E974 /* Pods */ = {
@@ -337,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C7E5741DABF32F0007EE26 /* UIView+Manipulation.swift in Sources */,
 				02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */,
 				02C7E5681DABF0590007EE26 /* BubbleRankView.swift in Sources */,
 				02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */,
