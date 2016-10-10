@@ -23,6 +23,8 @@ class BubbleRankingIndicatorView: UIView {
         var ranks: [Rank]
         var activeRankLevel: Int
         var unachievedRankBackgroundColor: UIColor
+        var rankNameFont: UIFont
+        var rankNameColor: UIColor
     }
     
     var state: State {
@@ -51,7 +53,11 @@ class BubbleRankingIndicatorView: UIView {
         }
         
         // Use a default state for the oldValue
-        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.whiteColor())
+        let defaultState = State(ranks: [],
+                                 activeRankLevel: 0,
+                                 unachievedRankBackgroundColor: UIColor.whiteColor(),
+                                 rankNameFont: UIFont.systemFontOfSize(UIFont.systemFontSize()),
+                                 rankNameColor: UIColor.whiteColor())
         update(defaultState)
     }
     
@@ -85,10 +91,12 @@ class BubbleRankingIndicatorView: UIView {
         // Update all the rankViews state's.
         for (index, rankView) in self.rankViews.enumerate() {
             rankView.state =  BubbleRankView.State(rank: self.state.ranks[index],
-                                                          isActive: self.state.ranks[index].level == self.state.activeRankLevel,
-                                                          hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
-                                                          outerRingColor: UIColor.whiteColor(),
-                                                          backgroundColor: self.state.unachievedRankBackgroundColor)
+                                                   isActive: self.state.ranks[index].level == self.state.activeRankLevel,
+                                                   hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
+                                                   outerRingColor: UIColor.whiteColor(),
+                                                   backgroundColor: self.state.unachievedRankBackgroundColor,
+                                                   rankNameFont: self.state.rankNameFont,
+                                                   rankNameColor: self.state.rankNameColor)
         }
         
         self.setNeedsUpdateConstraints()

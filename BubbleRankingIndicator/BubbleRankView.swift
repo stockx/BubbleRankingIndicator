@@ -20,6 +20,8 @@ class BubbleRankView: UIView {
         var hasAchievedRank: Bool
         var outerRingColor: UIColor?
         var backgroundColor: UIColor
+        var rankNameFont: UIFont
+        var rankNameColor: UIColor
     }
     
     var state: State? {
@@ -107,6 +109,9 @@ class BubbleRankView: UIView {
         else {
             label.backgroundColor = UIColor.clearColor()
         }
+        
+        label.font = state.rankNameFont
+        label.textColor = state.rankNameColor
     }
     
     // MARK: View
