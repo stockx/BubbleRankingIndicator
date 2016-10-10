@@ -101,15 +101,15 @@ class BubbleRankingIndicatorView: UIView {
         let width = bounds.width
         let height = bounds.height
         
-        // If the view height is too small to accomodate for the circular
-        // level ranks to all be right next to eachother, don't do anything and
+        // If the view height is too small to accomodate for the bubbles to all
+        // be right next to eachother, don't do anything and
         // print a warning message to the console.
         // Currently (v1.0), this does not support when the height is too small
         // thus requiring the ranks to be spaced out.
         let targetedDiameter = width / CGFloat(self.state.ranks.count)
         
         guard (targetedDiameter * self.activeRankSizeMultiplier) <= height else {
-            print("CircularLevenRankingIndicatorView: View is too short to support circular level ranks.\nNot drawing any ranks")
+            print("BubbleRankingIndicator: BubbleRankingIndicatorView is too short to support bubbles given the number of ranks.\nNot drawing any ranks.")
             self.rankViews.forEach { $0.snp_removeConstraints() }
             super.updateConstraints()
             return
