@@ -1,6 +1,0 @@
-framework module Pods_CircularLevelRankingIndicatorTests {
-  umbrella header "Pods-CircularLevelRankingIndicatorTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
