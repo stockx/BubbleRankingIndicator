@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02B0ED791DABF41900381D4E /* CircularLevelRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5751DABF3B40007EE26 /* CircularLevelRankingIndicatorTests.swift */; };
+		02B0ED7D1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */; };
 		02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E55F1DABF0590007EE26 /* AppDelegate.swift */; };
 		02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5601DABF0590007EE26 /* Assets.xcassets */; };
 		02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */; };
@@ -38,6 +38,7 @@
 		01591C3A154D106B24207C77 /* Pods_BubbleRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubbleRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A181191DA54A5100F0FEB6 /* BubbleRankingIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleRankingIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A1812D1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleRankingIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRankingIndicatorTests.swift; sourceTree = "<group>"; };
 		02C7E55F1DABF0590007EE26 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BubbleRankingIndicator/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		02C7E5601DABF0590007EE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BubbleRankingIndicator/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleRankingIndicatorView.swift; path = BubbleRankingIndicator/BubbleRankingIndicatorView.swift; sourceTree = SOURCE_ROOT; };
@@ -47,7 +48,6 @@
 		02C7E56C1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		02C7E56E1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		02C7E5731DABF32F0007EE26 /* UIView+Manipulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Manipulation.swift"; sourceTree = "<group>"; };
-		02C7E5751DABF3B40007EE26 /* CircularLevelRankingIndicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularLevelRankingIndicatorTests.swift; path = BubbleRankingIndicatorTests/CircularLevelRankingIndicatorTests.swift; sourceTree = SOURCE_ROOT; };
 		02C7E5761DABF3B40007EE26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BubbleRankingIndicatorTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.debug.xcconfig"; sourceTree = "<group>"; };
 		139E819A5631AF6608680CC2 /* Pods-BubbleRankingIndicatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleRankingIndicatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleRankingIndicatorTests/Pods-BubbleRankingIndicatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			children = (
 				02A1811B1DA54A5100F0FEB6 /* BubbleRankingIndicator */,
 				02C7E5721DABF3150007EE26 /* Extensions */,
-				02A181301DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */,
+				02A181301DA54A5100F0FEB6 /* BubbleRankingIndicatorTests */,
 				02A1811A1DA54A5100F0FEB6 /* Products */,
 				9F5DA5248FCA20BBDF55E974 /* Pods */,
 				E2A83A86A074CFBABC10E91B /* Frameworks */,
@@ -121,13 +121,13 @@
 			path = CircularLevelRankingIndicator;
 			sourceTree = "<group>";
 		};
-		02A181301DA54A5100F0FEB6 /* CircularLevelRankingIndicatorTests */ = {
+		02A181301DA54A5100F0FEB6 /* BubbleRankingIndicatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				02C7E5751DABF3B40007EE26 /* CircularLevelRankingIndicatorTests.swift */,
+				02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */,
 				02C7E5761DABF3B40007EE26 /* Info.plist */,
 			);
-			path = CircularLevelRankingIndicatorTests;
+			path = BubbleRankingIndicatorTests;
 			sourceTree = "<group>";
 		};
 		02C7E5721DABF3150007EE26 /* Extensions */ = {
@@ -378,7 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B0ED791DABF41900381D4E /* CircularLevelRankingIndicatorTests.swift in Sources */,
+				02B0ED7D1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
