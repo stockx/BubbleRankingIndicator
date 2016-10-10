@@ -61,10 +61,7 @@ class BubbleRankView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
-        
-        // TODO: REMOVE THIS LINE
-        backgroundColor = UIColor.blueColor()
-        
+
         imageView.clipsToBounds = true
         imageView.contentMode = .ScaleAspectFit
         contentView.addSubview(imageView)
