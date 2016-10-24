@@ -11,23 +11,23 @@ import UIKit
 // Libs
 import SnapKit
 
-struct Rank {
-    let level: Int
-    let name: String
-    let backgroundImageName: String?
+public struct Rank {
+    public let level: Int
+    public let name: String
+    public let backgroundImageName: String?
 }
 
-class BubbleRankingIndicatorView: UIView {
+public class BubbleRankingIndicatorView: UIView {
     
-    struct State {
-        var ranks: [Rank]
-        var activeRankLevel: Int
-        var unachievedRankBackgroundColor: UIColor
-        var rankNameFont: UIFont
-        var rankNameColor: UIColor
+    public struct State {
+        public var ranks: [Rank]
+        public var activeRankLevel: Int
+        public var unachievedRankBackgroundColor: UIColor
+        public var rankNameFont: UIFont
+        public var rankNameColor: UIColor
     }
     
-    var state: State {
+    public var state: State {
         didSet {
             update(oldValue)
         }
@@ -37,13 +37,13 @@ class BubbleRankingIndicatorView: UIView {
      Represents how much larger the active BubbleRankView
      will be than the inactive ones.
      */
-    let activeRankSizeMultiplier: CGFloat = 1.3
+    public let activeRankSizeMultiplier: CGFloat = 1.3
     
     private var rankViews = [BubbleRankView]()
     
     // MARK: Init
     
-    init(state: State) {
+    public init(state: State) {
         self.state = state
         
         super.init(frame: CGRectZero)
@@ -61,11 +61,11 @@ class BubbleRankingIndicatorView: UIView {
         update(defaultState)
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         fatalError("init(frame:) has not been implemented. Use init(ranks:).")
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented. Use init(ranks:).")
     }
     
@@ -104,7 +104,7 @@ class BubbleRankingIndicatorView: UIView {
     
     // MARK: View
     
-    override func updateConstraints() {
+    override public func updateConstraints() {
         
         let width = bounds.width
         let height = bounds.height
