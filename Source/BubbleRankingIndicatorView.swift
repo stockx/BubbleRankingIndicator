@@ -54,17 +54,7 @@ public class BubbleRankingIndicatorView: UIView {
         
         super.init(frame: CGRectZero)
         
-        self.rankViews.forEach {
-            self.addSubview($0)
-        }
-        
-        // Use a default state for the oldValue
-        let defaultState = State(ranks: [],
-                                 activeRankLevel: 0,
-                                 unachievedRankBackgroundColor: UIColor.whiteColor(),
-                                 rankNameFont: UIFont.systemFontOfSize(UIFont.systemFontSize()),
-                                 rankNameColor: UIColor.whiteColor())
-        update(defaultState)
+        commonInit()
     }
     
     override public init(frame: CGRect) {
@@ -77,11 +67,20 @@ public class BubbleRankingIndicatorView: UIView {
         
         super.init(coder: aDecoder)
         
+        commonInit()
+    }
+    
+    private func commonInit() {
         self.rankViews.forEach {
             self.addSubview($0)
         }
         
         // Use a default state for the oldValue
+        let defaultState = State(ranks: [],
+                                 activeRankLevel: 0,
+                                 unachievedRankBackgroundColor: UIColor.whiteColor(),
+                                 rankNameFont: UIFont.systemFontOfSize(UIFont.systemFontSize()),
+                                 rankNameColor: UIColor.whiteColor())
         update(defaultState)
     }
     
