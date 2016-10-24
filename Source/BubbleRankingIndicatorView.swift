@@ -15,6 +15,12 @@ public struct Rank {
     public let level: Int
     public let name: String
     public let backgroundImageName: String?
+    
+    public init(level: Int, name: String, backgroundImageName: String?) {
+        self.level = level
+        self.name = name
+        self.backgroundImageName = backgroundImageName
+    }
 }
 
 public class BubbleRankingIndicatorView: UIView {
@@ -62,11 +68,21 @@ public class BubbleRankingIndicatorView: UIView {
     }
     
     override public init(frame: CGRect) {
-        fatalError("init(frame:) has not been implemented. Use init(ranks:).")
+        fatalError("init(frame:) has not been implemented. Use init(state:).")
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented. Use init(ranks:).")
+        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.lightGrayColor(), rankNameFont: UIFont.systemFontOfSize(16), rankNameColor: UIColor.whiteColor())
+        self.state = defaultState
+        
+        super.init(coder: aDecoder)
+        
+        self.rankViews.forEach {
+            self.addSubview($0)
+        }
+        
+        // Use a default state for the oldValue
+        update(defaultState)
     }
     
     // MARK: State
