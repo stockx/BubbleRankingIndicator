@@ -20,7 +20,6 @@
 		02C7E5781DABF3B40007EE26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5761DABF3B40007EE26 /* Info.plist */; };
 		06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */; };
 		16E1DF2CF3AEE71FB77EFFD5 /* Pods_BubbleRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01591C3A154D106B24207C77 /* Pods_BubbleRankingIndicator.framework */; };
-		25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */; };
 		F5FF3B566883D066D76B9BE2 /* Pods_BubbleRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659F93DAC0F0E4E72F4EA412 /* Pods_BubbleRankingIndicatorTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25315C4F07610A498FA6E6CB /* Pods_CircularLevelRankingIndicator.framework in Frameworks */,
 				16E1DF2CF3AEE71FB77EFFD5 /* Pods_BubbleRankingIndicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
