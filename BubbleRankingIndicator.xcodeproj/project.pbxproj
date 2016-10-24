@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0276F4001DBEB00A0095A5EE /* BubbleRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276F3FE1DBEB00A0095A5EE /* BubbleRankingIndicatorView.swift */; };
+		0276F4011DBEB00A0095A5EE /* BubbleRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0276F3FF1DBEB00A0095A5EE /* BubbleRankView.swift */; };
 		02B0ED7D1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */; };
 		02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E55F1DABF0590007EE26 /* AppDelegate.swift */; };
 		02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5601DABF0590007EE26 /* Assets.xcassets */; };
-		02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */; };
-		02C7E5681DABF0590007EE26 /* BubbleRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5621DABF0590007EE26 /* BubbleRankView.swift */; };
 		02C7E5691DABF0590007EE26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5631DABF0590007EE26 /* Info.plist */; };
 		02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5641DABF0590007EE26 /* ViewController.swift */; };
 		02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */; };
@@ -35,13 +35,13 @@
 
 /* Begin PBXFileReference section */
 		01591C3A154D106B24207C77 /* Pods_BubbleRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubbleRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0276F3FE1DBEB00A0095A5EE /* BubbleRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRankingIndicatorView.swift; sourceTree = "<group>"; };
+		0276F3FF1DBEB00A0095A5EE /* BubbleRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRankView.swift; sourceTree = "<group>"; };
 		02A181191DA54A5100F0FEB6 /* BubbleRankingIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BubbleRankingIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A1812D1DA54A5100F0FEB6 /* BubbleRankingIndicatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BubbleRankingIndicatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleRankingIndicatorTests.swift; sourceTree = "<group>"; };
 		02C7E55F1DABF0590007EE26 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BubbleRankingIndicator/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		02C7E5601DABF0590007EE26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = BubbleRankingIndicator/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleRankingIndicatorView.swift; path = BubbleRankingIndicator/BubbleRankingIndicatorView.swift; sourceTree = SOURCE_ROOT; };
-		02C7E5621DABF0590007EE26 /* BubbleRankView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BubbleRankView.swift; path = BubbleRankingIndicator/BubbleRankView.swift; sourceTree = SOURCE_ROOT; };
 		02C7E5631DABF0590007EE26 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BubbleRankingIndicator/Info.plist; sourceTree = SOURCE_ROOT; };
 		02C7E5641DABF0590007EE26 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BubbleRankingIndicator/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		02C7E56C1DABF0690007EE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = BubbleRankingIndicator/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
@@ -82,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0276F3FD1DBEB00A0095A5EE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0276F3FE1DBEB00A0095A5EE /* BubbleRankingIndicatorView.swift */,
+				0276F3FF1DBEB00A0095A5EE /* BubbleRankView.swift */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
+		};
 		02A181101DA54A5100F0FEB6 = {
 			isa = PBXGroup;
 			children = (
@@ -106,10 +115,9 @@
 		02A1811B1DA54A5100F0FEB6 /* BubbleRankingIndicator */ = {
 			isa = PBXGroup;
 			children = (
+				0276F3FD1DBEB00A0095A5EE /* Source */,
 				02C7E55F1DABF0590007EE26 /* AppDelegate.swift */,
 				02C7E5601DABF0590007EE26 /* Assets.xcassets */,
-				02C7E5611DABF0590007EE26 /* BubbleRankingIndicatorView.swift */,
-				02C7E5621DABF0590007EE26 /* BubbleRankView.swift */,
 				02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */,
 				02C7E56D1DABF0690007EE26 /* Main.storyboard */,
 				02C7E5631DABF0590007EE26 /* Info.plist */,
@@ -365,8 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C7E5741DABF32F0007EE26 /* UIView+Manipulation.swift in Sources */,
-				02C7E5671DABF0590007EE26 /* BubbleRankingIndicatorView.swift in Sources */,
-				02C7E5681DABF0590007EE26 /* BubbleRankView.swift in Sources */,
+				0276F4001DBEB00A0095A5EE /* BubbleRankingIndicatorView.swift in Sources */,
+				0276F4011DBEB00A0095A5EE /* BubbleRankView.swift in Sources */,
 				02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */,
 				02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */,
 			);
