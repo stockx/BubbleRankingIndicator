@@ -121,6 +121,11 @@ public class BubbleRankingIndicatorView: UIView {
     
     override public func updateConstraints() {
         
+        guard self.state.ranks.count > 0 else {
+            super.updateConstraints()
+            return
+        }
+        
         let width = bounds.width
         let height = bounds.height
         
