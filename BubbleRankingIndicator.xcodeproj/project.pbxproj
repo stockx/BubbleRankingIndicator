@@ -13,7 +13,6 @@
 		02B0ED7D1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0ED7C1DABF66C00381D4E /* BubbleRankingIndicatorTests.swift */; };
 		02C7E5651DABF0590007EE26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E55F1DABF0590007EE26 /* AppDelegate.swift */; };
 		02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5601DABF0590007EE26 /* Assets.xcassets */; };
-		02C7E5691DABF0590007EE26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5631DABF0590007EE26 /* Info.plist */; };
 		02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5641DABF0590007EE26 /* ViewController.swift */; };
 		02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */; };
 		02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56D1DABF0690007EE26 /* Main.storyboard */; };
@@ -221,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Sklar;
 				TargetAttributes = {
 					02A181181DA54A5100F0FEB6 = {
@@ -260,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */,
-				02C7E5691DABF0590007EE26 /* Info.plist in Resources */,
 				02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */,
 				02C7E5781DABF3B40007EE26 /* Info.plist in Resources */,
 				02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */,
@@ -434,8 +432,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -480,8 +480,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -500,6 +502,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -509,6 +512,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EE93845D34BFBFA4C721C75 /* Pods-BubbleRankingIndicator.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
@@ -524,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 684BBB7DBF89D6CFE3BE7322 /* Pods-BubbleRankingIndicator.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
