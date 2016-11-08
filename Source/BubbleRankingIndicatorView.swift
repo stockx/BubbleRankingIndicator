@@ -138,7 +138,7 @@ open class BubbleRankingIndicatorView: UIView {
         
         guard (targetedDiameter * self.activeRankSizeMultiplier) <= height else {
             print("BubbleRankingIndicator: BubbleRankingIndicatorView is too short to support bubbles given the number of ranks.\nNot drawing any ranks.")
-            self.rankViews.forEach { $0.snp_removeConstraints() }
+            self.rankViews.forEach { $0.snp.removeConstraints() }
             super.updateConstraints()
             return
         }
@@ -151,27 +151,27 @@ open class BubbleRankingIndicatorView: UIView {
         for (index, rankView) in self.rankViews.enumerated() {
             // If it's the first one, anchor it to the left side.
             if index == 0 {
-                rankView.snp_remakeConstraints { make in
+                rankView.snp.remakeConstraints { make in
                     make.centerY.equalToSuperview()
                     make.left.equalToSuperview()
-                    make.height.equalTo(rankView.snp_width)
+                    make.height.equalTo(rankView.snp.width)
                 }
             }
             
             // If it's somewhere in the middle or the end, anchor the left to to the previous one,
             // and set the height and width equal
             if index > 0 && index <= (self.rankViews.count - 1) {
-                rankView.snp_remakeConstraints { make in
+                rankView.snp.remakeConstraints { make in
                     make.centerY.equalToSuperview()
-                    make.left.equalTo(self.rankViews[index - 1].snp_right).offset(-20)
-                    make.height.equalTo(rankView.snp_width)
+                    make.left.equalTo(self.rankViews[index - 1].snp.right).offset(-20)
+                    make.height.equalTo(rankView.snp.width)
                 }
             }
             
-            // If it's the last one, add (snp_make, not snp_remake since we don't
+            // If it's the last one, add (snp.make, not snp.remake since we don't
             // want to blow away the ones we just created) an anchor to the right side
             if index == self.rankViews.count - 1 {
-                rankView.snp_makeConstraints { make in
+                rankView.snp.makeConstraints { make in
                     make.centerY.equalToSuperview()
                     make.right.equalToSuperview()
                 }
@@ -196,8 +196,8 @@ open class BubbleRankingIndicatorView: UIView {
         // Make all width's of the inactive rankViews equal.
         for (index, rankView) in inactiveRankViews.enumerated() {
             if index > 0 {
-                rankView.snp_makeConstraints { make in
-                    make.width.equalTo(inactiveRankViews[index - 1].snp_width)
+                rankView.snp.makeConstraints { make in
+                    make.width.equalTo(inactiveRankViews[index - 1].snp.width)
                 }
             }
         }
@@ -205,8 +205,8 @@ open class BubbleRankingIndicatorView: UIView {
         // Make the width of the active rankView larger than the inactive ones.
         if let activeRankView = activeRankView,
             let firstInactiveRankView = inactiveRankViews.first {
-            activeRankView.snp_makeConstraints { make in
-                make.width.equalTo(firstInactiveRankView.snp_width).multipliedBy(self.activeRankSizeMultiplier)
+            activeRankView.snp.makeConstraints { make in
+                make.width.equalTo(firstInactiveRankView.snp.width).multipliedBy(self.activeRankSizeMultiplier)
             }
         }
         

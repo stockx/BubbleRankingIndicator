@@ -120,15 +120,15 @@ class BubbleRankView: UIView {
     }
     
     override func updateConstraints() {
-        contentView.snp_remakeConstraints { make in
+        contentView.snp.remakeConstraints { make in
             make.edges.equalToSuperview().inset(self.padding)
         }
         
-        imageView.snp_remakeConstraints { (make) in
+        imageView.snp.remakeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         
-        label.snp_remakeConstraints { make in
+        label.snp.remakeConstraints { make in
             make.edges.equalToSuperview()
         }
         

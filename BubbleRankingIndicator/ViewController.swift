@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         bubbleRankingIndicatorContainerView.addSubview(ranking)
         
-        ranking.snp_remakeConstraints { (make) in
+        ranking.snp.remakeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         
