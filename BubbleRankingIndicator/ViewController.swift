@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         ranks.append(Rank(level: 1, name: "2", backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg"))
         ranks.append(Rank(level: 2, name: "3", backgroundImageName: "https://t4.rbxcdn.com/ec3f660cb0d5b1d080c951169a98d9f4"))
         ranks.append(Rank(level: 3, name: "4", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2010/02/michael_jordan2010-headshot-blk-brgd-med-wide.jpg"))
-        let state = BubbleRankingIndicatorView.State(ranks: ranks, activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.lightGrayColor(), rankNameFont: UIFont.systemFontOfSize(30), rankNameColor: UIColor.whiteColor())
+        let state = BubbleRankingIndicatorView.State(ranks: ranks, activeRankLevel: 0, unachievedRankBackgroundColor: .lightGray, rankNameFont: UIFont.systemFont(ofSize: 30), rankNameColor: .white)
         
         let ranking = BubbleRankingIndicatorView(state: state)
         
@@ -42,15 +42,15 @@ class ViewController: UIViewController {
         self.ranking = ranking
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         ranking!.setNeedsUpdateConstraints()
     }
     
-    @IBAction func drawBubbleRankingIndicatorView(sender: UIButton) {
+    @IBAction func drawBubbleRankingIndicatorView(_ sender: UIButton) {
         guard let numberOfRanks = Int(numberOfRanksTextField.text ?? ""),
-            let activeRank = Int(activeRankTextField.text ?? "") where activeRank < numberOfRanks else {
+            let activeRank = Int(activeRankTextField.text ?? ""), activeRank < numberOfRanks else {
                 return
         }
         
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.drawBubbleRankingIndicatorView(self.drawViewButton)
         return true
     }

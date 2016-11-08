@@ -33,27 +33,27 @@ class BubbleRankView: UIView {
     /**
      The label used to display the level name.
      */
-    private let label = UILabel()
+    fileprivate let label = UILabel()
     
     /**
      The inner subview. This view is slightly smaller than `self`, and is what is used
      to display the content of othe level (name and background image).
      */
-    private let contentView = UIView()
+    fileprivate let contentView = UIView()
     
     /**
      The imageview to display the background image of the rank.
      */
-    private let imageView = UIImageView()
+    fileprivate let imageView = UIImageView()
     
     /**
      The padding value between the contentView and its superview.
      In other words, the size of the outer ring.
      */
-    private let padding: CGFloat = 2.5
+    fileprivate let padding: CGFloat = 2.5
     
     convenience init(state: State) {
-        self.init(frame: CGRectZero)
+        self.init(frame: CGRect.zero)
         self.state = state
         update()
     }
@@ -63,11 +63,11 @@ class BubbleRankView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
 
         imageView.clipsToBounds = true
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .scaleAspectFit
         contentView.addSubview(imageView)
         
         label.clipsToBounds = true
-        label.textAlignment = .Center
+        label.textAlignment = .center
         contentView.addSubview(label)
         
         
@@ -78,7 +78,7 @@ class BubbleRankView: UIView {
         fatalError("init(coder:) has not been implemented. Use init(state:).")
     }
     
-    private func update() {
+    fileprivate func update() {
         guard let state = state else {
             return
         }
@@ -87,7 +87,7 @@ class BubbleRankView: UIView {
         self.backgroundColor = state.outerRingColor
         self.contentView.backgroundColor = state.backgroundColor
         if let imageURLString = state.rank.backgroundImageName,
-            imageURL = NSURL(string: imageURLString) {
+            let imageURL = URL(string: imageURLString) {
             self.imageView.hnk_setImageFromURL(imageURL,
                                                placeholder: nil,
                                                format: Format<UIImage>(name: "RankImages"),
@@ -98,13 +98,13 @@ class BubbleRankView: UIView {
             })
         }
         
-        imageView.hidden = !state.hasAchievedRank
+        imageView.isHidden = !state.hasAchievedRank
         
         if state.hasAchievedRank && !state.isActive {
-            label.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.25)
+            label.backgroundColor = UIColor.black.withAlphaComponent(0.25)
         }
         else {
-            label.backgroundColor = UIColor.clearColor()
+            label.backgroundColor = .clear
         }
         
         label.font = state.rankNameFont

@@ -13,7 +13,7 @@ extension UIView {
      Rounds the corners of 'self' to form a circle, based on the current width.
      */
     func makeCircular() {
-        layer.cornerRadius = CGRectGetWidth(bounds) / 2.0;
+        layer.cornerRadius = bounds.width / 2.0;
         clipsToBounds = true
     }
 }

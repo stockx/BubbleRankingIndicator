@@ -23,7 +23,7 @@ public struct Rank {
     }
 }
 
-public class BubbleRankingIndicatorView: UIView {
+open class BubbleRankingIndicatorView: UIView {
     
     public struct State {
         public var ranks: [Rank]
@@ -33,7 +33,7 @@ public class BubbleRankingIndicatorView: UIView {
         public var rankNameColor: UIColor
     }
     
-    public var state: State {
+    open var state: State {
         didSet {
             update(oldValue)
         }
@@ -43,16 +43,16 @@ public class BubbleRankingIndicatorView: UIView {
      Represents how much larger the active BubbleRankView
      will be than the inactive ones.
      */
-    public let activeRankSizeMultiplier: CGFloat = 1.3
+    open let activeRankSizeMultiplier: CGFloat = 1.3
     
-    private var rankViews = [BubbleRankView]()
+    fileprivate var rankViews = [BubbleRankView]()
     
     // MARK: Init
     
     public init(state: State) {
         self.state = state
         
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         
         commonInit()
     }
@@ -62,7 +62,7 @@ public class BubbleRankingIndicatorView: UIView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.lightGrayColor(), rankNameFont: UIFont.systemFontOfSize(16), rankNameColor: UIColor.whiteColor())
+        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: .lightGray, rankNameFont: UIFont.systemFont(ofSize: 16), rankNameColor: .white)
         self.state = defaultState
         
         super.init(coder: aDecoder)
@@ -70,7 +70,7 @@ public class BubbleRankingIndicatorView: UIView {
         commonInit()
     }
     
-    private func commonInit() {
+    fileprivate func commonInit() {
         self.rankViews.forEach {
             self.addSubview($0)
         }
@@ -78,15 +78,15 @@ public class BubbleRankingIndicatorView: UIView {
         // Use a default state for the oldValue
         let defaultState = State(ranks: [],
                                  activeRankLevel: 0,
-                                 unachievedRankBackgroundColor: UIColor.whiteColor(),
-                                 rankNameFont: UIFont.systemFontOfSize(UIFont.systemFontSize()),
-                                 rankNameColor: UIColor.whiteColor())
+                                 unachievedRankBackgroundColor: .white,
+                                 rankNameFont: UIFont.systemFont(ofSize: UIFont.systemFontSize),
+                                 rankNameColor: .white)
         update(defaultState)
     }
     
     // MARK: State
     
-    func update(oldState: State) {
+    func update(_ oldState: State) {
         // If the number of ranks has changed, need to remove the old ones and
         // add the new ones.
         if oldState.ranks.count != self.state.ranks.count {
@@ -104,11 +104,11 @@ public class BubbleRankingIndicatorView: UIView {
         }
         
         // Update all the rankViews state's.
-        for (index, rankView) in self.rankViews.enumerate() {
+        for (index, rankView) in self.rankViews.enumerated() {
             rankView.state =  BubbleRankView.State(rank: self.state.ranks[index],
                                                    isActive: self.state.ranks[index].level == self.state.activeRankLevel,
                                                    hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
-                                                   outerRingColor: UIColor.whiteColor(),
+                                                   outerRingColor: .white,
                                                    backgroundColor: self.state.unachievedRankBackgroundColor,
                                                    rankNameFont: self.state.rankNameFont,
                                                    rankNameColor: self.state.rankNameColor)
@@ -119,7 +119,7 @@ public class BubbleRankingIndicatorView: UIView {
     
     // MARK: View
     
-    override public func updateConstraints() {
+    override open func updateConstraints() {
         
         guard self.state.ranks.count > 0 else {
             super.updateConstraints()
@@ -148,7 +148,7 @@ public class BubbleRankingIndicatorView: UIView {
         
         var hasShownActiveRankView = false
         
-        for (index, rankView) in self.rankViews.enumerate() {
+        for (index, rankView) in self.rankViews.enumerated() {
             // If it's the first one, anchor it to the left side.
             if index == 0 {
                 rankView.snp_remakeConstraints { make in
@@ -178,23 +178,23 @@ public class BubbleRankingIndicatorView: UIView {
             }
 
             if rankView.state?.isActive == true {
-                bringSubviewToFront(rankView)
+                bringSubview(toFront: rankView)
                 hasShownActiveRankView = true
                 activeRankView = rankView
             }
             else {
                 if !hasShownActiveRankView {
-                    bringSubviewToFront(rankView)
+                    bringSubview(toFront: rankView)
                 }
                 else {
-                    sendSubviewToBack(rankView)
+                    sendSubview(toBack: rankView)
                 }
                 inactiveRankViews.append(rankView)
             }
         }
         
         // Make all width's of the inactive rankViews equal.
-        for (index, rankView) in inactiveRankViews.enumerate() {
+        for (index, rankView) in inactiveRankViews.enumerated() {
             if index > 0 {
                 rankView.snp_makeConstraints { make in
                     make.width.equalTo(inactiveRankViews[index - 1].snp_width)
