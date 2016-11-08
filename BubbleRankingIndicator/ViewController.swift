@@ -29,7 +29,13 @@ class ViewController: UIViewController {
         ranks.append(Rank(level: 1, name: "2", backgroundImageName: "https://speakerdata.s3.amazonaws.com/photo/image/873292/KimKardashian300232.jpg"))
         ranks.append(Rank(level: 2, name: "3", backgroundImageName: "https://t4.rbxcdn.com/ec3f660cb0d5b1d080c951169a98d9f4"))
         ranks.append(Rank(level: 3, name: "4", backgroundImageName: "https://www.eurweb.com/wp-content/uploads/2010/02/michael_jordan2010-headshot-blk-brgd-med-wide.jpg"))
-        let state = BubbleRankingIndicatorView.State(ranks: ranks, activeRankLevel: 0, unachievedRankBackgroundColor: .lightGray, rankNameFont: UIFont.systemFont(ofSize: 30), rankNameColor: .white)
+        var state = BubbleRankingIndicatorView.State()
+        state.ranks = ranks
+        state.activeRankLevel = 0
+        state.unachievedRankBackgroundColor = .lightGray
+        state.rankNameFont = .systemFont(ofSize: 30)
+        state.rankNameColor = .white
+        state.rankLevelOnActiveRankIsHidden = true
         
         let ranking = BubbleRankingIndicatorView(state: state)
         
