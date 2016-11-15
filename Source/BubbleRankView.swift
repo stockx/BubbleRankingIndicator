@@ -22,6 +22,9 @@ class BubbleRankView: UIView {
         var backgroundColor: UIColor
         var rankNameFont: UIFont
         var rankNameColor: UIColor
+        /// Whether or not the rank level label is hidden.
+        /// Defaults to false.
+        var rankLevelLabelIsHidden: Bool
     }
     
     var state: State? {
@@ -107,6 +110,8 @@ class BubbleRankView: UIView {
             label.backgroundColor = UIColor.clearColor()
         }
         
+        label.hidden = state.rankLevelLabelIsHidden
+
         label.font = state.rankNameFont
         label.textColor = state.rankNameColor
     }

@@ -31,6 +31,18 @@ public class BubbleRankingIndicatorView: UIView {
         public var unachievedRankBackgroundColor: UIColor
         public var rankNameFont: UIFont
         public var rankNameColor: UIColor
+        /// Whether or not the rank level number is hidden on the active bubble rank.
+        /// Defaults to true.
+        public var rankLevelOnActiveRankIsHidden: Bool
+        
+        init() {
+            ranks = []
+            activeRankLevel = 0
+            unachievedRankBackgroundColor = UIColor.lightGrayColor()
+            rankNameFont = UIFont.systemFontOfSize(16)
+            rankNameColor = UIColor.whiteColor()
+            rankLevelOnActiveRankIsHidden = true
+        }
     }
     
     public var state: State {
@@ -62,7 +74,7 @@ public class BubbleRankingIndicatorView: UIView {
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        let defaultState = State(ranks: [], activeRankLevel: 0, unachievedRankBackgroundColor: UIColor.lightGrayColor(), rankNameFont: UIFont.systemFontOfSize(16), rankNameColor: UIColor.whiteColor())
+        let defaultState = State()
         self.state = defaultState
         
         super.init(coder: aDecoder)
@@ -76,11 +88,7 @@ public class BubbleRankingIndicatorView: UIView {
         }
         
         // Use a default state for the oldValue
-        let defaultState = State(ranks: [],
-                                 activeRankLevel: 0,
-                                 unachievedRankBackgroundColor: UIColor.whiteColor(),
-                                 rankNameFont: UIFont.systemFontOfSize(UIFont.systemFontSize()),
-                                 rankNameColor: UIColor.whiteColor())
+        let defaultState = State()
         update(defaultState)
     }
     
@@ -105,13 +113,19 @@ public class BubbleRankingIndicatorView: UIView {
         
         // Update all the rankViews state's.
         for (index, rankView) in self.rankViews.enumerate() {
-            rankView.state =  BubbleRankView.State(rank: self.state.ranks[index],
-                                                   isActive: self.state.ranks[index].level == self.state.activeRankLevel,
-                                                   hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
-                                                   outerRingColor: UIColor.whiteColor(),
-                                                   backgroundColor: self.state.unachievedRankBackgroundColor,
-                                                   rankNameFont: self.state.rankNameFont,
-                                                   rankNameColor: self.state.rankNameColor)
+            let rankIsActive = self.state.ranks[index].level == self.state.activeRankLevel
+            
+            var state = BubbleRankView.State(rank: self.state.ranks[index],
+                                             isActive: self.state.ranks[index].level == self.state.activeRankLevel,
+                                             hasAchievedRank: self.state.ranks[index].level <= self.state.activeRankLevel,
+                                             outerRingColor: UIColor.whiteColor(),
+                                             backgroundColor: self.state.unachievedRankBackgroundColor,
+                                             rankNameFont: self.state.rankNameFont,
+                                             rankNameColor: self.state.rankNameColor,
+                                             rankLevelLabelIsHidden: false)
+            state.rankLevelLabelIsHidden = rankIsActive && self.state.rankLevelOnActiveRankIsHidden
+            
+            rankView.state = state
         }
         
         self.setNeedsUpdateConstraints()
