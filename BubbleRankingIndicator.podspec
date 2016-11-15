@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name               = "BubbleRankingIndicator"
-  s.version            = "0.1.2"
+  s.version            = "0.1.3"
   s.summary            = "Blah"
   s.homepage           = "Blah"
   s.license            = "MIT"
