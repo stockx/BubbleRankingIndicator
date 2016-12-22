@@ -8,7 +8,7 @@
 Description
 --------------
 
-`BubbldRankingIndicator` is a customizable circular ranking indicator written in Swift that can be used to display ranking information.
+`BubbleRankingIndicator` is a customizable circular ranking indicator written in Swift that can be used to display ranking information.
 
 ![Example](https://cloud.githubusercontent.com/assets/879038/21441684/61779150-c867-11e6-8823-52f8d8ebc7ef.png)
 
