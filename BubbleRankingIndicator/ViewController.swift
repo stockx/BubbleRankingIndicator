@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         state.unachievedRankBackgroundColor = .lightGray
         state.rankNameFont = .systemFont(ofSize: 30)
         state.rankNameColor = .white
-        state.rankLevelOnActiveRankIsHidden = true
+        state.rankNameOnActiveRankIsHidden = true
         
         let ranking = BubbleRankingIndicatorView(state: state)
         

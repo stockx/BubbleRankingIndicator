@@ -33,7 +33,7 @@ public class BubbleRankingIndicatorView: UIView {
         public var rankNameColor: UIColor
         /// Whether or not the rank level number is hidden on the active bubble rank.
         /// Defaults to true.
-        public var rankLevelOnActiveRankIsHidden: Bool
+        public var rankNameOnActiveRankIsHidden: Bool
         
         init() {
             ranks = []
@@ -41,7 +41,7 @@ public class BubbleRankingIndicatorView: UIView {
             unachievedRankBackgroundColor = .lightGray
             rankNameFont = .systemFont(ofSize: 16)
             rankNameColor = .white
-            rankLevelOnActiveRankIsHidden = true
+            rankNameOnActiveRankIsHidden = true
         }
     }
     
@@ -123,7 +123,7 @@ public class BubbleRankingIndicatorView: UIView {
                                              rankNameFont: self.state.rankNameFont,
                                              rankNameColor: self.state.rankNameColor,
                                              rankLevelLabelIsHidden: false)
-            state.rankLevelLabelIsHidden = rankIsActive && self.state.rankLevelOnActiveRankIsHidden
+            state.rankLevelLabelIsHidden = rankIsActive && self.state.rankNameOnActiveRankIsHidden
             
             rankView.state = state
         }
