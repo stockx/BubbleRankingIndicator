@@ -77,8 +77,8 @@ var state = bubbleRankingIndicatorView.state
 var ranks = [Rank]()
 // Create and initialize all of the Ranks. These can be changed later.
 state.ranks = ranks
-state.unachievedRankBackgroundColor = .gray
-state.rankNameFont = .systemFontOfSize(26, weight: UIFontWeightBold)
+state.unachievedRankBackgroundColor = .lightGray
+state.rankNameFont = .systemFont(ofSize: 30)
 
 bubbleRankingIndicatorView.state = state
 ```
