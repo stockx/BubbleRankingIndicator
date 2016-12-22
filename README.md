@@ -19,11 +19,8 @@ In this screenshot the user has achieved rank 2 out of 4, and the images used ar
 3. [Installation](#installation)
 4. [Supported OS & SDK versions](#supported-versions)
 5. [Usage](#usage)
-6. [Customising the appearance](#customising)
-7. [Customising the presentation and dismissal animations](#customising-animations)
-9. [Public interface](#public-interface)
-10. [License](#license)
-11. [Contact](#contact)
+6. [License](#license)
+7. [Contact](#contact)
 
 ##<a name="features"> Features </a>
 
