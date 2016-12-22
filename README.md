@@ -1,5 +1,4 @@
-<img src="https://cloud.githubusercontent.com/assets/879038/21441308/6b63a25a-c865-11e6-8acf-d67163450a39.png" style="width: 800px">
-
+![Bubble Ranking Indicator Logo](https://cloud.githubusercontent.com/assets/879038/21443097/6a79c36e-c870-11e6-9771-88a7b59d31eb.png)
 
 ![Swift3](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat")
 [![Platform](https://img.shields.io/cocoapods/p/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
