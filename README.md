@@ -1,4 +1,4 @@
-![BubbleRankingIndicator Logo](https://cloud.githubusercontent.com/assets/879038/21441308/6b63a25a-c865-11e6-8acf-d67163450a39.png)
+<img src="https://cloud.githubusercontent.com/assets/879038/21441308/6b63a25a-c865-11e6-8acf-d67163450a39.png" style="width: 800px">
 
 
 ![Swift3](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat")
