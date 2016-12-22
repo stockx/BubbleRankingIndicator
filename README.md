@@ -45,7 +45,7 @@ $ gem install cocoapods
 To integrate `BubbleRankingIndicator` into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod 'BubbleRankingIndicator', '~> 1.0.2'
+pod 'BubbleRankingIndicator'
 ```
 
 Then, run the following command:
