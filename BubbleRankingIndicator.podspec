@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "https://instagram.com/jrmsklar"
   s.platform           = :ios
   s.platform           = :ios, "8.2"
-  s.source             = { :git => "https://github.com/stockx/BubbleRankingIndicator", :tag => s.version}
+  s.source             = { :git => "https://github.com/stockx/BubbleRankingIndicator.git", :tag => s.version}
   s.source_files       = "Source/**/*.swift"
   s.dependency           "SnapKit"
   s.dependency           "HanekeSwift"
