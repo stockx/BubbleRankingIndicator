@@ -68,6 +68,8 @@ If you prefer not to use CocoaPods, you can integrate `BubbleRankingIndicator` i
 <a name="usage"> Usage </a>
 --------------
 
+`BubbleRankingIndicator` is state based. To configure the view, simply update the state value with whatever values you'd like, and re-set the state:
+
 1) First you should set up the `BubbleRankingIndicator`:
 
 ```swift
