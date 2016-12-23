@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name               = "BubbleRankingIndicator"
   s.version            = "0.3.1"
-  s.summary            = "A customizable circular ranking indicator."
+  s.summary            = "A customizable circular ranking indicator written in Swift."
   s.homepage           = "https://github.com/stockx/BubbleRankingIndicator"
   s.license            = "MIT"
   s.author             = { "Josh Sklar" => "jrmsklar@gmail.com" }
