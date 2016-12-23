@@ -63,7 +63,7 @@ If you prefer not to use CocoaPods, you can integrate `BubbleRankingIndicator` i
 <a name="supported-versions"> Supported OS & SDK Versions </a>
 -----------------------------
 
-* Supported build target - iOS 8+ (Xcode 7.3+)
+* Supported build target - iOS 8.2+ (Xcode 7.3+)
 
 <a name="usage"> Usage </a>
 --------------
