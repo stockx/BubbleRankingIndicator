@@ -24,9 +24,9 @@ In this screenshot the user has achieved rank 2 out of 4, and the images used ar
 
 ##<a name="features"> Features </a>
 
-- [x] Fully supports AutoLayout.
+- [x] Supports AutoLayout.
 - [x] Supports any number of ranks as long as they fit within the bounds of the view.
-- [x] Customize background images of all ranks.
+- [x] Supports customizing background images of all ranks.
 - [x] Supports being created either in code or a Storyboard.
 
 <a name="installation"> Installation </a>
