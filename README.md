@@ -1,6 +1,6 @@
 ![Bubble Ranking Indicator Logo](https://cloud.githubusercontent.com/assets/879038/21443097/6a79c36e-c870-11e6-9771-88a7b59d31eb.png)
 
-![Swift3](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat")
+![Swift3](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat")
 [![Platform](https://img.shields.io/cocoapods/p/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
 [![Version](https://img.shields.io/cocoapods/v/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
 [![License](https://img.shields.io/cocoapods/l/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
@@ -22,7 +22,7 @@ In this screenshot the user has achieved rank 2 out of 4, and the images used ar
 6. [License](#license)
 7. [Contact](#contact)
 
-##<a name="features"> Features </a>
+<a name="features"> Features </a>
 
 - [x] Supports AutoLayout.
 - [x] Supports any number of ranks as long as they fit within the bounds of the view.
@@ -63,7 +63,7 @@ If you prefer not to use CocoaPods, you can integrate `BubbleRankingIndicator` i
 <a name="supported-versions"> Supported OS & SDK Versions </a>
 -----------------------------
 
-* Supported build target - iOS 8.2+ (Xcode 7.3+)
+* Supported build target - iOS 11.0+ (Xcode 10+)
 
 <a name="usage"> Usage </a>
 --------------
