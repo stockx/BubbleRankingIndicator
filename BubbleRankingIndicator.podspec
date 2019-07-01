@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license            = "MIT"
   s.author             = { "Josh Sklar" => "jrmsklar@gmail.com" }
   s.social_media_url   = "https://instagram.com/jrmsklar"
-  s.platform           = :ios
+  s.platform           = :ios, "11.0"
   s.source             = { :git => "https://github.com/stockx/BubbleRankingIndicator.git", :tag => s.version}
   s.source_files       = "Source/**/*.swift"
   s.dependency           "SnapKit"
