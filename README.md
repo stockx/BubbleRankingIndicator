@@ -1,6 +1,6 @@
 ![Bubble Ranking Indicator Logo](https://cloud.githubusercontent.com/assets/879038/21443097/6a79c36e-c870-11e6-9771-88a7b59d31eb.png)
 
-![Swift3](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat")
+![Swift5](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat")
 [![Platform](https://img.shields.io/cocoapods/p/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
 [![Version](https://img.shields.io/cocoapods/v/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
 [![License](https://img.shields.io/cocoapods/l/BubbleRankingIndicator.svg?style=flat)](http://cocoapods.org/pods/BubbleRankingIndicator)
