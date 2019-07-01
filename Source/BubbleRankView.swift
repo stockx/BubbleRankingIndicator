@@ -95,7 +95,7 @@ class BubbleRankView: UIView {
                                                placeholder: nil,
                                                format: Format<UIImage>(name: "RankImages"),
                                                failure: { (error) in
-                                                print("Failed fetching rank image from URL \(imageURL). Error: \(error)")
+                                                print("Failed fetching rank image from URL \(imageURL). Error: \(String(describing: error))")
                 }, success: { (image) in
                     self.imageView.image = image
             })

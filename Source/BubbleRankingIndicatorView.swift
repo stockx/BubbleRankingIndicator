@@ -192,16 +192,16 @@ public class BubbleRankingIndicatorView: UIView {
             }
 
             if rankView.state?.isActive == true {
-                bringSubview(toFront: rankView)
+                bringSubviewToFront(rankView)
                 hasShownActiveRankView = true
                 activeRankView = rankView
             }
             else {
                 if !hasShownActiveRankView {
-                    bringSubview(toFront: rankView)
+                    bringSubviewToFront(rankView)
                 }
                 else {
-                    sendSubview(toBack: rankView)
+                    sendSubviewToBack(rankView)
                 }
                 inactiveRankViews.append(rankView)
             }

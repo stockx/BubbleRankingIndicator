@@ -1,25 +1,29 @@
 PODS:
   - HanekeSwift (0.10.1.8)
-  - SnapKit (3.0.2)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
-  - HanekeSwift (from `git@github.com:stockx/HanekeSwift.git`, tag `v0.10.1.8`)
+  - "HanekeSwift (from `git@github.com:stockx/HanekeSwift.git`, tag `v0.10.1.8`)"
   - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapKit
 
 EXTERNAL SOURCES:
   HanekeSwift:
-    :git: git@github.com:stockx/HanekeSwift.git
+    :git: "git@github.com:stockx/HanekeSwift.git"
     :tag: v0.10.1.8
 
 CHECKOUT OPTIONS:
   HanekeSwift:
-    :git: git@github.com:stockx/HanekeSwift.git
+    :git: "git@github.com:stockx/HanekeSwift.git"
     :tag: v0.10.1.8
 
 SPEC CHECKSUMS:
   HanekeSwift: 12252b78d5cea4d1aadbafcd1c918ed1140ebf67
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: 08bdf1664af2fc51aeed5701072f6d668a696ecd
+PODFILE CHECKSUM: a9d275c5d93070dc9a85667e519371c6b29e4bf3
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.7.0
