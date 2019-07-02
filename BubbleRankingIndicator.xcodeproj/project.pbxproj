@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,6 @@
 		02C7E56A1DABF0590007EE26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C7E5641DABF0590007EE26 /* ViewController.swift */; };
 		02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56B1DABF0690007EE26 /* LaunchScreen.storyboard */; };
 		02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E56D1DABF0690007EE26 /* Main.storyboard */; };
-		02C7E5781DABF3B40007EE26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C7E5761DABF3B40007EE26 /* Info.plist */; };
-		06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */; };
 		16E1DF2CF3AEE71FB77EFFD5 /* Pods_BubbleRankingIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01591C3A154D106B24207C77 /* Pods_BubbleRankingIndicator.framework */; };
 		F5FF3B566883D066D76B9BE2 /* Pods_BubbleRankingIndicatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659F93DAC0F0E4E72F4EA412 /* Pods_BubbleRankingIndicatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,7 +48,6 @@
 		11AC78AAFBFD4A0900FCFBFF /* Pods-CircularLevelRankingIndicator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircularLevelRankingIndicator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircularLevelRankingIndicator/Pods-CircularLevelRankingIndicator.debug.xcconfig"; sourceTree = "<group>"; };
 		139E819A5631AF6608680CC2 /* Pods-BubbleRankingIndicatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleRankingIndicatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleRankingIndicatorTests/Pods-BubbleRankingIndicatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CircularLevelRankingIndicatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		659F93DAC0F0E4E72F4EA412 /* Pods_BubbleRankingIndicatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BubbleRankingIndicatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684BBB7DBF89D6CFE3BE7322 /* Pods-BubbleRankingIndicator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleRankingIndicator.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleRankingIndicator/Pods-BubbleRankingIndicator.release.xcconfig"; sourceTree = "<group>"; };
 		6B4E28234429A117BD1B8016 /* Pods-BubbleRankingIndicatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BubbleRankingIndicatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BubbleRankingIndicatorTests/Pods-BubbleRankingIndicatorTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06938FE8C37B123B44C4BAF5 /* Pods_CircularLevelRankingIndicatorTests.framework in Frameworks */,
 				F5FF3B566883D066D76B9BE2 /* Pods_BubbleRankingIndicatorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				27296909FBABEB15E59FA95C /* Pods_CircularLevelRankingIndicator.framework */,
-				488F1A7A4A4FD98056830C00 /* Pods_CircularLevelRankingIndicatorTests.framework */,
 				01591C3A154D106B24207C77 /* Pods_BubbleRankingIndicator.framework */,
 				659F93DAC0F0E4E72F4EA412 /* Pods_BubbleRankingIndicatorTests.framework */,
 			);
@@ -181,7 +176,6 @@
 				02A181161DA54A5100F0FEB6 /* Frameworks */,
 				02A181171DA54A5100F0FEB6 /* Resources */,
 				C3B976DA3DBF7D395D89F09D /* [CP] Embed Pods Frameworks */,
-				9715E836E87F14BBD62BAE30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,8 +194,6 @@
 				02A181291DA54A5100F0FEB6 /* Sources */,
 				02A1812A1DA54A5100F0FEB6 /* Frameworks */,
 				02A1812B1DA54A5100F0FEB6 /* Resources */,
-				350248279D293BF44AB0D6CC /* [CP] Embed Pods Frameworks */,
-				0ED7177AB7C4A93EA45D7992 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +212,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Sklar;
 				TargetAttributes = {
 					02A181181DA54A5100F0FEB6 = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1020;
 					};
 					02A1812C1DA54A5100F0FEB6 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -235,10 +227,11 @@
 				};
 			};
 			buildConfigurationList = 02A181141DA54A5100F0FEB6 /* Build configuration list for PBXProject "BubbleRankingIndicator" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -260,7 +253,6 @@
 			files = (
 				02C7E56F1DABF0690007EE26 /* LaunchScreen.storyboard in Resources */,
 				02C7E5661DABF0590007EE26 /* Assets.xcassets in Resources */,
-				02C7E5781DABF3B40007EE26 /* Info.plist in Resources */,
 				02C7E5701DABF0690007EE26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,28 +273,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BubbleRankingIndicatorTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		0ED7177AB7C4A93EA45D7992 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubbleRankingIndicatorTests/Pods-BubbleRankingIndicatorTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		34990AAFDEAC6C479412B3DD /* [CP] Check Pods Manifest.lock */ = {
@@ -311,43 +291,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BubbleRankingIndicator-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		350248279D293BF44AB0D6CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubbleRankingIndicatorTests/Pods-BubbleRankingIndicatorTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9715E836E87F14BBD62BAE30 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubbleRankingIndicator/Pods-BubbleRankingIndicator-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3B976DA3DBF7D395D89F09D /* [CP] Embed Pods Frameworks */ = {
@@ -356,13 +309,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BubbleRankingIndicator/Pods-BubbleRankingIndicator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HanekeSwift/Haneke.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BubbleRankingIndicator/Pods-BubbleRankingIndicator-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BubbleRankingIndicator/Pods-BubbleRankingIndicator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -422,19 +380,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -457,11 +424,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -470,19 +438,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -499,10 +476,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -512,15 +491,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EE93845D34BFBFA4C721C75 /* Pods-BubbleRankingIndicator.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.BubbleRankingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -528,14 +508,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 684BBB7DBF89D6CFE3BE7322 /* Pods-BubbleRankingIndicator.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/BubbleRankingIndicator/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.BubbleRankingIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -545,10 +526,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BubbleRankingIndicatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.BubbleRankingIndicatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BubbleRankingIndicator.app/BubbleRankingIndicator";
 			};
 			name = Debug;
@@ -559,10 +543,13 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BubbleRankingIndicatorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sklar.BubbleRankingIndicatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BubbleRankingIndicator.app/BubbleRankingIndicator";
 			};
 			name = Release;
